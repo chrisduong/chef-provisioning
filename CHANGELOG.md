@@ -1,7 +1,28 @@
 # Change Log
 
-## [1.8.0](https://github.com/chef/chef-provisioning/tree/1.8.0) (2016-06-16)
-[Full Changelog](https://github.com/chef/chef-provisioning/compare/v1.7.1...1.8.0)
+## [v1.9.1](https://github.com/chef/chef-provisioning/tree/v1.9.1) (2016-08-11)
+[Full Changelog](https://github.com/chef/chef-provisioning/compare/v1.9.0...v1.9.1)
+
+**Merged pull requests:**
+
+- allows cheffish 3.0 to stop pulling in compat\_resource [\#534](https://github.com/chef/chef-provisioning/pull/534) ([lamont-granquist](https://github.com/lamont-granquist))
+
+## [v1.9.0](https://github.com/chef/chef-provisioning/tree/v1.9.0) (2016-08-11)
+[Full Changelog](https://github.com/chef/chef-provisioning/compare/v1.8.1...v1.9.0)
+
+**Closed issues:**
+
+- Uninitialized constant Chef::Resource::Machine [\#531](https://github.com/chef/chef-provisioning/issues/531)
+
+## [v1.8.1](https://github.com/chef/chef-provisioning/tree/v1.8.1) (2016-08-03)
+[Full Changelog](https://github.com/chef/chef-provisioning/compare/v1.8.0...v1.8.1)
+
+**Merged pull requests:**
+
+- Cleaning up a deprecation warning [\#530](https://github.com/chef/chef-provisioning/pull/530) ([tyler-ball](https://github.com/tyler-ball))
+
+## [v1.8.0](https://github.com/chef/chef-provisioning/tree/v1.8.0) (2016-06-16)
+[Full Changelog](https://github.com/chef/chef-provisioning/compare/v1.7.1...v1.8.0)
 
 **Closed issues:**
 
@@ -227,6 +248,7 @@
 **Closed issues:**
 
 - chef-dk 0.5.1 with chef-zero renders unusable chefzero://localhost:8889 URLs on nodes [\#336](https://github.com/chef/chef-provisioning/issues/336)
+- Updating chef-provisioning-aws breaks chef-client -z functionality with ChefDK 0.4.0 \(current version\). [\#322](https://github.com/chef/chef-provisioning/issues/322)
 - Converging 0 resources - Am I missing something? [\#320](https://github.com/chef/chef-provisioning/issues/320)
 
 **Merged pull requests:**
@@ -250,7 +272,7 @@
 
 **Merged pull requests:**
 
-- fix machine\_batch :destroy \#319 [\#321](https://github.com/chef/chef-provisioning/pull/321) ([patrick-wright](https://github.com/patrick-wright))
+- fix machine\_batch :destroy \#319 [\#321](https://github.com/chef/chef-provisioning/pull/321) ([wrightp](https://github.com/wrightp))
 - Install chef-client using Proxy [\#317](https://github.com/chef/chef-provisioning/pull/317) ([afiune](https://github.com/afiune))
 - Allow user to specify a custom stdout in Chef::Config\[:stdout\] [\#311](https://github.com/chef/chef-provisioning/pull/311) ([jkeiser](https://github.com/jkeiser))
 
@@ -376,7 +398,7 @@
 - Update to ignore .idea directories. [\#247](https://github.com/chef/chef-provisioning/pull/247) ([miguelcnf](https://github.com/miguelcnf))
 - Change Metal to Provisioning [\#240](https://github.com/chef/chef-provisioning/pull/240) ([twellspring](https://github.com/twellspring))
 - In simple example, require chef/provisioning [\#239](https://github.com/chef/chef-provisioning/pull/239) ([janeireton](https://github.com/janeireton))
-- MEGA chef-provisioning-test-suite project dump [\#238](https://github.com/chef/chef-provisioning/pull/238) ([patrick-wright](https://github.com/patrick-wright))
+- MEGA chef-provisioning-test-suite project dump [\#238](https://github.com/chef/chef-provisioning/pull/238) ([wrightp](https://github.com/wrightp))
 - Fix ssh driver url [\#233](https://github.com/chef/chef-provisioning/pull/233) ([gravitystorm](https://github.com/gravitystorm))
 - Flip logic on ssl peer validation [\#232](https://github.com/chef/chef-provisioning/pull/232) ([andrewelizondo](https://github.com/andrewelizondo))
 - add chef-provisioning-crowbar to README.md [\#230](https://github.com/chef/chef-provisioning/pull/230) ([newgoliath](https://github.com/newgoliath))
