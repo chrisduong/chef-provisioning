@@ -1,0 +1,46 @@
+RuntimeError
+    ------------
+    Error: command 'sh -c /tmp/chef-install.sh' exited with code 1.
+
+    Resource Declaration:
+    ---------------------
+    # In /Users/cduong/Dropbox/abcom/repo/cookbooks/s1_provision/recipes/role.rb
+
+     54: machine machine_name do
+     55:   machine_options ProvisionReference::Helpers
+     56:     .get_machine_options(node, machine_name)
+     57:   chef_environment context_opts.environment || 'development'
+     58:   file "/etc/chef/trusted_certs/#{cert_name}", cert_path
+     59:   run_list context_opts.run_list || ['role[base1]']
+     60:   # Same as node.name
+     61:   attribute %w(system short_hostname), machine_name
+     62:   action act.to_sym
+     63: end
+
+    Compiled Resource:
+    ------------------
+    # Declared in /Users/cduong/Dropbox/abcom/repo/cookbooks/s1_provision/recipes/role.rb:54:in `from_file'
+
+    machine("testnode") do
+      action [:converge]
+      retries 0
+      retry_delay 2
+      default_guard_interpreter :default
+      chef_server {:chef_server_url=>"https://chef-server-prod.eu-west-1.compute.internal/organizations/abcom", :options=>{:client_name=>"superadmin", :signing_key_filename=>"/Users/cduong/Dropbox/abcom/repo/chef-repo-2/.chef/superadmin.key", :api_version=>"0"}}
+      chef_environment "development"
+      driver "aws::eu-west-1"
+      machine_options {:convergence_options=>{:bootstrap_proxy=>nil, :chef_config=>nil, :chef_version=>"12.9", :install_sh_path=>nil}, :ssh_username=>"ubuntu", :transport_address_location=>"private_ip", :bootstrap_options=>{:key_name=>"abcom-provisioner", :image_id=>"ami-15b9d166", :iam_instance_profile=>"ChangeRecords-Route53", :subnet_id=>"subnet-bd0c3cca", :security_group_ids=>["sg-0aba736f"], :instance_type=>"t2.micro"}}
+      declared_type :machine
+      cookbook_name :s1_provision
+      recipe_name "role"
+      files {"/etc/chef/trusted_certs/chef-server-prod_eu-west-1_compute_internal.crt"=>"/Users/cduong/abcom/repo/chef-repo-2/.chef/trusted_certs/chef-server-prod_eu-west-1_compute_internal.crt"}
+      run_list ["role[base1]"]
+      attribute_modifiers [[["system", "short_hostname"], "testnode"]]
+    end
+
+    Platform:
+    ---------
+    x86_64-darwin13.0
+
+Error: Chef failed to converge: machine[testnode] (s1_provision::role line 54) had an error: RuntimeError: Error: command 'sh -c /tmp/chef-install.sh' exited with code 1.
+Reason: (RuntimeError) machine[testnode] (s1_provision::role line 54) had an error: RuntimeError: Error: command 'sh -c /tmp/chef-install.sh' exited with code 1.
