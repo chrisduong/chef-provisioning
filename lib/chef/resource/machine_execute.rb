@@ -18,7 +18,8 @@ class MachineExecute < Chef::Resource::LWRPBase
   default_action :run
 
   attribute :command, :kind_of => String, :name_attribute => true
-  attribute :machine, :kind_of => String
+  attribute :timeout, :kind_of => Integer, :default => 15*60
+  attribute :machine, :kind_of => String, :required => true
   attribute :live_stream, :kind_of => [TrueClass,FalseClass], :default => false
 
   attribute :chef_server, :kind_of => Hash
